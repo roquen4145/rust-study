@@ -2,13 +2,15 @@
 
 # IDE
 
-## For Windows
+## Clion
 
-I tried Clion for rust development and found it good except for different shortcut from vscode or visual studio
+using Clion at work (windows)
+pros : there are many features
+cons : different shortcut from vscode, very slow while commit, difficult to use git feature
 
-## For Mac
+## VScode
 
-Trying to find some...
+will try to use at home (macbook)
 
 # reference
 
