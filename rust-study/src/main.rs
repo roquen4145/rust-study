@@ -1,11 +1,14 @@
 pub mod my_thread;
 
+use log::{info};
+
 /// # Main File for rust binary
 /// everything start from main function
 
 
 fn main() {
     println!("Hello, world!"); // basic way to print something to console
+    info!("Log Test!");
 }
 
 #[cfg(test)]
