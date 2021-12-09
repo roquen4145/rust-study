@@ -20,4 +20,13 @@ mod tests {
     fn make_thread(){
         my_thread::make_thread();
     }
+
+    #[test]
+    fn make_many_thread(){
+        for i in 1..10 {
+            std::thread::spawn(move||{ // to use i in thread, add move keyword to spawn argument
+                println!("Hello World! in thread {}", i);
+            });
+        }
+    }
 }
