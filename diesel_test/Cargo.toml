@@ -1,5 +1,5 @@
 [package]
-name = "diesel"
+name = "diesel_test"
 version = "0.1.0"
 authors = ["roquen4145 <roquen4145@gmail.com>"]
 edition = "2018"
