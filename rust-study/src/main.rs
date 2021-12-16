@@ -51,4 +51,61 @@ mod tests {
             my_string = "B";
         }
     }
+
+    #[test]
+    fn loop_test(){
+        let mut a = 0;
+        while a<10 {
+            println!("{}",a);
+            a+=1;
+        }
+    }
+
+    #[test]
+    fn loop_test_2(){
+        let mut a = 0;
+        loop {
+            println!("{}",a);
+            a+=1;
+            if a>10 {
+                break;
+            }
+        }
+    }
+
+    #[test]
+    fn create_query(){
+        let start = 0;
+        let end = 10;
+        let size = 3;
+        let mut res = Vec::new();
+        let mut a = start;
+        while a < end {
+            println!("{}",a);
+            res.push(format!("(Number={})",a.to_string()));
+            a+=size;
+        }
+        println!("{:?}",res);
+    }
+
+
+    #[test]
+    fn create_query_1(){
+        let start = 0;
+        let end = 10;
+        let size = 3;
+        let mut res = String::new();
+        let mut a = start;
+        loop{
+            println!("{}",a);
+            res.push_str(format!("(Number={})",a.to_string()).as_str());
+            a+=size;
+            if a > end {
+                res.push(';');
+                break;
+            }
+            res.push(',');
+        }
+        println!("{:?}",res);
+    }
 }
