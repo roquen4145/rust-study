@@ -1,3 +1,6 @@
+extern crate chrono;
+extern crate chrono_tz;
+
 pub mod my_thread;
 
 use log::{info};
@@ -13,6 +16,9 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
+    use chrono::{DateTime, Utc};
+    use chrono_tz::{Asia::Seoul, Tz};
+    
     #[test]
     fn print_helloworld(){
         assert!(true);
@@ -107,5 +113,12 @@ mod tests {
             res.push(',');
         }
         println!("{:?}",res);
+    }
+
+    #[test]
+    fn datetime_test(){
+        let seoul_nowtime:DateTime<Tz> = Utc::now().with_timezone(&Seoul);
+        println!("서울 현재 시각: {}", seoul_nowtime);
+
     }
 }
