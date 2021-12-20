@@ -5,13 +5,19 @@
 - create a new directory
 - add dependency to Cargo.toml
 - install diesel_cli  
-    cargo install diesel_cli --no-default-features --features postgres
+``` bash
+cargo install diesel_cli --no-default-features --features postgres
+```
 - setup diesel by following command
 ``` bash
 echo DATABASE_URL=postgres://username:password@localhost/diesel_demo > .env
 diesel setup
 ```
-
+- create main migration
+``` bash
+diesel migration generate create_posts
+```
+- 
 ## install postgres
 
 [docker-postgres](https://devinlife.com/postgresql/run-postgresql-on-docker/)
