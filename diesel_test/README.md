@@ -33,6 +33,15 @@ $ setx PQ_LIB_DIR "C:\Program Files\PostgreSQL\14\lib"
 reboot
 
 
+# Trouble Shooting
+
+## the trait 'Expression' is not implemented for naiveDateTime
+diesel feature chrono needed in toml
+``` toml
+[depependencies]
+diesel = { version = "1.4.8", features = ["chrono"] }
+```
+
 ## reference
 
 [diesel](https://diesel.rs/guides/getting-started)
