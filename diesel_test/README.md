@@ -29,7 +29,7 @@ $ export PQ_LIB_DIR="${brew --prefix libpq}/lib"
 
 ## diesel_cli install link fail issue on Windows
 insatll postgresql  
-$ setx PQ_LIB_DIR "C:\Program Files\PostgreSQL\14\lib"
+$ setx PQ_LIB_DIR "C:\Program Files\PostgreSQL\14\lib"  
 reboot
 
 
@@ -38,13 +38,14 @@ reboot
 ## the trait 'Expression' is not implemented for naiveDateTime
 diesel feature 'chrono' needed in toml
 ``` toml
-[depependencies]
+[dependencies]
 diesel = { version = "1.4.8", features = ["chrono"] }
 ```
 
 ## the trait 'Deserialize' is not implemented for naiveDateTime
 chrono feature 'serde' needed in toml
 ``` toml
+[dependencies]
 chrono = { version = "0.4.19", features = ["serde"] }
 ````
 
