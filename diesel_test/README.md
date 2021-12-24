@@ -36,11 +36,17 @@ reboot
 # Trouble Shooting
 
 ## the trait 'Expression' is not implemented for naiveDateTime
-diesel feature chrono needed in toml
+diesel feature 'chrono' needed in toml
 ``` toml
 [depependencies]
 diesel = { version = "1.4.8", features = ["chrono"] }
 ```
+
+## the trait 'Deserialize' is not implemented for naiveDateTime
+chrono feature 'serde' needed in toml
+``` toml
+chrono = { version = "0.4.19", features = ["serde"] }
+````
 
 ## reference
 
