@@ -24,11 +24,11 @@ diesel migration generate create_posts
 when you fail to run docker, install docker-desktop version on mac
 
 ## diesel_cli install link fail issue on Mac
-$ brew install libpq
+$ brew install libpq  
 $ export PQ_LIB_DIR="${brew --prefix libpq}/lib"
 
 ## diesel_cli install link fail issue on Windows
-insatll postgresql
+insatll postgresql  
 $ setx PQ_LIB_DIR "C:\Program Files\PostgreSQL\14\lib"
 reboot
 
